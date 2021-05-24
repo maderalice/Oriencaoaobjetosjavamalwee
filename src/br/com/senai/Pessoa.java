@@ -3,9 +3,9 @@ package br.com.senai;
 public class Pessoa {
 	
 	//ATRIBUTOS 
-	String nome;
-	int anoDeNascimento;
-	String sexo;
+	private String nome;
+	private int anoDeNascimento;
+	private String sexo;
 	
 	
 	//METODOS

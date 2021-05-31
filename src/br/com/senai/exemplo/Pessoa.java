@@ -1,4 +1,4 @@
-package br.com.senai;
+package br.com.senai.exemplo;
 
 public class Pessoa {
 	
@@ -32,4 +32,13 @@ public class Pessoa {
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
+
+	@Override
+	public String toString() {
+		return "\nNome=" + nome + 
+				"\nAnoDeNascimento=" + anoDeNascimento +
+				"\nSexo=" + sexo  ;
+	}
+	
+	
 }

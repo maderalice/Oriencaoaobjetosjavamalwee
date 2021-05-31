@@ -1,4 +1,4 @@
-package br.com.senai;
+package br.com.senai.exemplo;
 
 public class Carro {
 	

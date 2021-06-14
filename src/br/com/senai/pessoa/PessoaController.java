@@ -21,6 +21,8 @@ public class PessoaController {
 		System.out.println("\n----MENU----");
 		System.out.println("1) CADASTRAR PESSOA");
 		System.out.println("2) LISTAR PESSOAS CADASTRADAS");
+		System.out.println("3) CADASTRAR PRODUTOS");
+		System.out.println("4) LISTAR PRODUTOS");
 		System.out.println("9) SAIR DO SISTEMA");
 		System.out.println("-----------------------");
 	}
@@ -76,11 +78,11 @@ public class PessoaController {
 	public List<Pessoa> listarPessoas(List<Pessoa> pessoas) {
 		System.out.println("------------------PESSOAS CADASTRADAS-----------------");
 
-		System.out.printf("| %20s | %6s | %5s | %6s | %10s | %7s | %15s | %3s | %20s | %20s | %15s | %7s | %6s |\n", "Nome", "Ano", "Idade", "Altura", "País", 
-				"Sigla do País", "Estado", "Sigla do Estado", "Cidade", "Bairro", "Rua", "Complemento", "Número");
+		System.out.printf("| %13s | %4s | %5s | %5s | %12s | %20s | %16s | %12s | %35s | %16s | %6s |\n", "Nome", "Ano", "Idade", "Altura", "País", 
+				 "Estado", "Cidade", "Bairro", "Rua", "Complemento", "Número");
 
 		for (int i = 0; i < pessoas.size(); i++) {
-			System.out.printf("| %20s | %6d | %5d | %6.2f | %10s | %12s | %15s | %3s | %20s | %20s | %15s | %7s | %6d | \n", 
+			System.out.printf("| %13s | %4d | %5d | %6.2f | %5s - %3s | %5s - %3s | %16s | %12s | %35s | %16s | %6d | \n",
 					pessoas.get(i).getNome(),
 					pessoas.get(i).getAnoDeNascimento(), 
 					pessoas.get(i).getIdade(), 
@@ -99,4 +101,21 @@ public class PessoaController {
 		return pessoas;
 	}
 	
-}
+	public Pessoa cadastrar() {
+		Pessoa pessoa = new Pessoa();
+		pessoa.setAltura(1.62);
+		pessoa.setAnoDeNascimento(2004);
+		pessoa.setBairro("Centenário");
+		pessoa.setComplemento("Casa");
+		pessoa.setNome("Alice");
+		pessoa.setNomeCidade("Jaraguá do Sul");
+		pessoa.setRua("Expedicionário Fidélis Stinghen");
+		pessoa.setNomeEstado("Santa Catarina");
+		pessoa.setNomePais("Brasil");
+		pessoa.setNumeroDaCasa(760); 
+		pessoa.setSiglaEstado("SC");
+		pessoa.setSiglaPais("BR");
+		
+		return pessoa;
+		}
+	}

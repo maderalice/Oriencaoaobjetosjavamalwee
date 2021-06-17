@@ -14,7 +14,7 @@ public class ProgramaPrincipal {
 
 		List<Pessoa> pessoas = new ArrayList<>();
 		List<Produto> produtos = new ArrayList<Produto>();
-		
+
 		PessoaController pessoaController = new PessoaController();
 		ProdutoController produtoController = new ProdutoController();
 
@@ -29,20 +29,24 @@ public class ProgramaPrincipal {
 			case 1:
 				pessoas.add(pessoaController.cadastrarPessoa());
 				break;
-				
+
 			case 2:
 				pessoas.add(pessoaController.cadastrar());
 				pessoaController.listarPessoas(pessoas);
 				break;
-				
+
 			case 3:
 				produtos.add(produtoController.cadastrarProduto());
 				break;
-				
+
 			case 4:
 				produtoController.listarProdutos(produtos);
 				break;
 				
+			case 5:
+				produtoController.editarProduto(produtos);
+				break;
+
 			case 9:
 
 				sair = true;

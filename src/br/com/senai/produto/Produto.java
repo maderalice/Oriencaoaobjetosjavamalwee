@@ -2,17 +2,17 @@ package br.com.senai.produto;
 
 //CLASSE
 public class Produto {
-	
-	//ATRIBUTOS
+
+	// ATRIBUTOS
 	private String nomeDoProduto;
 	private double valorUnitarioDoProduto;
 	private int quantidadeDoProduto;
 	private double valorTotalDoProduto;
-	
-	//CONSTRUTOR
+
+	// CONSTRUTOR
 	public Produto() {
 	}
-	
+
 	public Produto(String nomeDoProduto, double valorUnitarioDoProduto, int quantidadeDoProduto,
 			double valorTotalDoProduto) {
 		super();
@@ -22,28 +22,35 @@ public class Produto {
 		this.valorTotalDoProduto = valorTotalDoProduto;
 	}
 
-	//METODOS
+	// METODOS
 	public String getNomeDoProduto() {
 		return nomeDoProduto;
 	}
+
 	public void setNomeDoProduto(String nomeDoProduto) {
 		this.nomeDoProduto = nomeDoProduto;
 	}
+
 	public double getValorUnitarioDoProduto() {
 		return valorUnitarioDoProduto;
 	}
+
 	public void setValorUnitarioDoProduto(double valorUnitarioDoProduto) {
 		this.valorUnitarioDoProduto = valorUnitarioDoProduto;
 	}
+
 	public int getQuantidadeDoProduto() {
 		return quantidadeDoProduto;
 	}
+
 	public void setQuantidadeDoProduto(int quantidadeDoProduto) {
 		this.quantidadeDoProduto = quantidadeDoProduto;
 	}
+
 	public double getValorTotalDoProduto() {
 		return valorTotalDoProduto;
 	}
+
 	public void setValorTotalDoProduto(double valorTotalDoProduto) {
 		this.valorTotalDoProduto = valorTotalDoProduto;
 	}

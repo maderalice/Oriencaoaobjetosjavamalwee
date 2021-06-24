@@ -14,7 +14,7 @@ public class ProdutoController {
 	public Produto cadastrarProduto() {
 		Produto produto = new Produto();
 		System.out.println("---CADASTRAR PRODUTO---");
-
+	
 		System.out.print("Informe o nome do produto: ");
 		produto.setNomeDoProduto(tec.next().toUpperCase());
 

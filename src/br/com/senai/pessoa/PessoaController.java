@@ -1,6 +1,7 @@
 package br.com.senai.pessoa;
 
 import java.util.List;
+
 import java.util.Scanner;
 
 import br.com.senai.produto.Produto;
@@ -19,17 +20,13 @@ public class PessoaController {
 		return tec.nextInt();
 	}
 
-	public void menu() {
+	public void menuPessoa() {
 		System.out.println("\n----MENU----");
 		System.out.println("1) CADASTRAR PESSOA");
 		System.out.println("2) LISTAR PESSOAS CADASTRADAS");
-		System.out.println("3) CADASTRAR PRODUTOS");
-		System.out.println("4) LISTAR PRODUTOS");
-		System.out.println("5) EDITAR PRODUTO");
-		System.out.println("6) EXCLUIR PRODUTO");
-		System.out.println("7) EDITAR PESSOAS CADASTRADAS");
-		System.out.println("8) EXCLUIR PESSOAS CADASTRADAS");
-		System.out.println("9) SAIR DO SISTEMA");
+		System.out.println("3) EDITAR PESSOAS CADASTRADAS");
+		System.out.println("4) EXCLUIR PESSOAS CADASTRADAS");
+		System.out.println("5) SAIR DO SISTEMA");
 		System.out.println("-----------------------");
 	}
 

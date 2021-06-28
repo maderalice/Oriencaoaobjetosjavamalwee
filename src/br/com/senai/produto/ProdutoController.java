@@ -3,6 +3,7 @@ package br.com.senai.produto;
 import java.util.List;
 import java.util.Scanner;
 
+
 public class ProdutoController {
 
 	private Scanner tec;
@@ -140,5 +141,50 @@ public class ProdutoController {
 		}
 		
 		produtos.remove(idProduto);
+	}
+	
+	public int leOpcao() {
+		System.out.print("> ");
+		return tec.nextInt();
+	}
+	
+	public void menu(List<Produto>produtos){
+		boolean sair = false;
+		
+		do {
+		
+		System.out.println("\n--- MENU ---");
+		System.out.println("1) Criar");
+		System.out.println("2) Editar");
+		System.out.println("3) Listar");
+		System.out.println("4) Excluir");
+		System.out.println("5) Sair do sistema");
+		System.out.println("-------------------");
+		
+		int opcao = leOpcao();
+		switch(opcao) {
+		
+		case 1: 
+			produtos.add(cadastrarProduto());
+			break;
+		case 2:
+			editarProduto(produtos);
+			break;
+		case 3:
+			listarProdutos(produtos);
+			break;
+		case 4:
+			excluirProduto(produtos);
+			break;
+		case 5:
+			sair = true;
+			break;
+
+		default:
+			System.out.println("Opção inválida!");
+			break;
+		}
+		
+		}while(!sair);
 	}
 }

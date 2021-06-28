@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import br.com.senai.loja.Venda;
+import br.com.senai.menu.Menu;
 import br.com.senai.pessoa.Pessoa;
 import br.com.senai.pessoa.PessoaController;
 import br.com.senai.pessoa.VendaController;
@@ -18,11 +19,6 @@ public class ProgramaPrincipal {
 	public ProgramaPrincipal() {
 		tec = new Scanner(System.in);
 
-	}
-
-	public int leOpcao() {
-		System.out.print("> ");
-		return tec.nextInt();
 	}
 
 	public static void main(String[] args) {
@@ -40,58 +36,28 @@ public class ProgramaPrincipal {
 		
 		produtos.add(produto);
 
+		boolean sair = false;
 		PessoaController pessoaController = new PessoaController();
 		ProdutoController produtoController = new ProdutoController();
 		VendaController vendaController = new VendaController();
-
-		boolean sair = false;
+		Menu menu = new Menu();
 
 		do {
-			pessoaController.menuPessoa();
+			menu.listarMenu();
 
-			int opcao = pessoaController.leOpcao();
-
+			int opcao = menu.leOpcao();
 			switch (opcao) {
 			case 1:
-				pessoas.add(pessoaController.cadastrarPessoa());
+				pessoaController.menu(pessoas);
 				break;
-
 			case 2:
-				pessoaController.listarPessoas(pessoas);
+				produtoController.menu(produtos);
 				break;
-
 			case 3:
-				produtos.add(produtoController.cadastrarProduto());
+				vendaController.menu(vendas, produtos, pessoas);
 				break;
 
 			case 4:
-				produtoController.listarProdutos(produtos);
-				break;
-				
-			case 5:
-				produtoController.editarProduto(produtos);
-				break;
-				
-			case 6:
-				produtoController.excluirProduto(produtos);
-				break;
-				
-			case 7:
-				pessoaController.editarPessoas(pessoas);
-				break;
-				
-			case 8:
-				
-			case 9:
-				vendas.add(vendaController.cadastrarVenda(produtos, pessoas));
-				break;
-				
-			case 10:
-				vendaController.listarVenda(vendas);
-				break;
-
-			case 11:
-
 				sair = true;
 				break;
 
@@ -105,12 +71,5 @@ public class ProgramaPrincipal {
 		System.out.println("Sistema finalizado!");
 	}
 	
-	public void menu() {
-		System.out.println("\n----MENU----");
-		System.out.println("1) PESSOA");
-		System.out.println("2) PRODUTOS");
-		System.out.println("3) VENDA");
-		System.out.println("4) SAIR DO SISTEMA");
-		System.out.println("-----------------------");
 	}
-}
+
